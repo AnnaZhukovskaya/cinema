@@ -1,0 +1,32 @@
+@use "src/styles/abstracts";
+
+.btn {
+  display: grid;
+  place-items: center;
+  height: 40px;
+  min-width: 120px;
+  padding-inline: 12px;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: abstracts.$color-light;
+  border-radius: abstracts.$borderRadius;
+  cursor: pointer;
+
+  &:disabled {
+    @include abstracts.disabled
+  }
+
+  &--primary {
+    background-color: abstracts.$color-primary;
+  }
+
+  &--warning {
+    background-color: abstracts.$color-warning;
+  }
+
+  &--danger {
+    background-color: abstracts.$color-danger;
+  }
+
+}
+
